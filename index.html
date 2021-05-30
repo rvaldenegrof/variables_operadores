@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="num1"><input type="number" id="num2">
+    <button>Sumar</button>
+
+    <script>
+        var n1 = document.getElementById("num1");
+        var n2 = document.getElementById("num2");
+        var button = document.getElementsByTagName("button")[0];
+
+        button.addEventListener("click", function(){
+            var num1 = +n1.value;
+            var num2 = +n2.value;
+            var suma = sumar(num1, num2);
+
+            document.write(suma);
+        });
+
+    /*      button.addEventListener("click", () => {
+            var num1 = +n1.value;
+            var num2 = +n2.value;
+            var suma = sumar(num1, num2);
+
+            document.write(suma);
+        }); */
+
+/*         button.addEventListener("click", sumar_fnc); 
+
+        function sumar_fnc(){
+            var num1 = +n1.value;
+            var num2 = +n2.value;
+            var suma = sumar(num1, num2);
+
+            document.write(suma);
+        } */
+
+        function sumar (n1, n2){
+            var suma = n1 + n2;
+            return suma;
+        }
+
+    </script>
+</body>
+</html>
